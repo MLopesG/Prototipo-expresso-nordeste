@@ -1,0 +1,68 @@
+	*{
+	margin:0;
+	padding:0;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+:root{
+	--cor-font:#000;
+	--cor-font_2:#fff;
+	--color-fundo:rgba(0,0,0,0.6);
+}
+html,
+body{
+	height:100%;
+	background:rgba(0,0,0,0.5);
+}
+html{
+   background: url(../img/fundo.jpg)no-repeat center center fixed; ;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+} 
+.container-input{
+	display:flex;
+	flex-direction:column;
+}
+form{
+	padding:30px 40px;
+}
+label{
+	line-height:2rem;
+	color:var(--cor-font_2);
+}
+form input[type='text'],[type="password"],[type='email']{
+	padding:0.3rem;
+}
+form input[type='button'],button{
+	padding:0.5em;
+	border:none;
+	background:#cc8e14;
+	color:var(--cor-font_2);
+	position:relative;
+	margin-bottom:20px;
+	top:2rem;
+}
+.linha{
+	height:30px;
+}
+a{
+	text-decoration:none;
+	line-height:6rem;
+	color:#fff;	
+}
+@media screen and (min-width:640px){
+	.espaco{
+	align-items:center;
+	display:flex;
+	justify-content:center;
+	height:100%;
+
+}
+.form_login{
+  background:var(--color-fundo);
+  width:28%;
+  height:350px;
+  box-shadow: 0px 50px 50px #212121;
+}
+}

@@ -1,0 +1,216 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Expresso Nordeste </title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+  </head>
+  <body  onLoad="slides()">
+    <header>
+      <div class="logo">
+        <img src="img/menu.png" class="logo_icone" id="ler">
+        <h1>Expresso Nordestino</h1>
+      </div>
+      <nav id="abrir">
+        <ul>
+          <li><a id="home">Home</a></li>
+          <li><a>Empresa</a>
+            <ul>
+              <li><a id="btn_sobre">Quem Somos</a></li>
+              <li><a href="#" id="lista_veiculos">Frota Expresso Nordeste</a></li>
+              <li><a href="#" id="pesquis">Pesquisar Veiculos</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Serviços</a>
+            <ul>
+              <li><a href="#Frota">Fretamento</a></li>
+              <li><a href="#pacotes">Pacotes De Viagens</a></li>
+              <li><a href="#Transporte">Transportadora</a></li>    
+              <li class="page" id="liberar"><a href="lista.html" id="registros_reservas"></a></li>
+            </ul>
+          </li>
+          <li  id="acesso">
+            <a id="remover" href="acesso.html">Login</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+     <section id="inicial"> 
+      <section class="banner">
+        <div>
+          <h1 id="Text"></h1>
+        </div>
+        <img id="img_automatico" />
+      </section>
+      <section class="caixa-onibus">
+        <h1>Fretamento Turisticos</h1>
+        <div>
+          <div class="veiculos " id="Frota"></div>
+        </div>
+        <h1>Localização Empresa</h1>
+        <div class="mapa">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3722078.022144182!2d-53.72848404374914!3d-24.352002185303174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ed0d3eec285091%3A0xa5b09603ee75e619!2sExpresso+Nordeste!5e0!3m2!1spt-BR!2sbr!4v1509823125109" width="1060" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+        <div >
+          <h1>Pacotes de Turisticos</h1>
+          <div>
+              <div class="serviços"  id="pacotes"></div>
+          </div>
+        </div>
+        <div class="Encomenda" id="Transporte">
+          <h1>Solicitar Coleta Encomenda</h1>
+          <form name="form_2" >
+            <div class="input-container">
+                <label>Digite Prazo Entrega Pretendido:</label>
+                <input type="text" name="prazo" placeholder="Digite informações">
+            </div>
+            <div class="input-container">
+                <label>Quantidada Caixas:</label>
+                <input type="text" name="Caixas"   placeholder="Digite Informações">
+            </div>
+            <div class="input-container">
+                <label>Peso Encomenda:</label>
+                <input type="text" name="peso" placeholder="Digite Informações">
+            </div>
+            <div class="input-container">
+              <label>Valor Total:</label>
+              <input type="text" disabled name="total_trans"  placeholder="Total Transporte">
+            </div>
+            <div class="input-container">
+              <label>Previsão Entrega:</label>
+              <input type="text" disabled name="previsão"  placeholder="Previsão Entregar  Transporte">
+            </div>
+            <div class="input-container">
+              <input type="button" value="Calcular transporte" id="btn_trans">
+            </div>
+            <div class="input-container" id="mostrar">
+            </div>
+          </form>
+          <div>
+            <img src="img/banner_passagem.jpg">
+          </div>
+        </div>
+        </div>
+      </section>
+    </section>
+     <section id="lista_frota" class="page">
+      <h1>Frota Expresso Nordeste Rodoviários e Urbanos</h1>
+      <section class="veiculos" id="levanta_veiculo" >
+       
+      </section>
+
+    </section>
+    <div id="myModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="img_modal">
+              <img src="" id="img">
+            </div>
+            <div class="informações_veiculo">
+              <div>
+                <p id="cod"></p>
+                <p id="nome"></p>
+                <p id="passageiros"></p>
+                <p id="ano"></p>
+                <p id="Quantidade"></p>
+              </div>
+              <div class="form-freta">
+                <form name="form_1">
+                  <div class="input-container">
+                    <label>Origem Fretamento</label>
+                    <input type="text" placeholder="Digite informações Cidade Ex: Dourados" name="origem_fretameto">
+                  </div>
+                  <div>
+                   <label>Destino Fretamento</label>
+                   <select id="itens" class="input-container">
+                     
+                   </select>
+                  </div>
+                  <div class="input-container">
+                    <label>Total Veiculos Fretar:</label>
+                    <input type="number" name="onibus_qtd" placeholder="Digite informações">
+                  </div>
+                  <div class="input-container">
+                    <label>Valor Total Fretamento:</label>
+                    <input type="number"  disabled  name="Total">
+                  </div>
+                  <div class="input-container">
+                    <label>Passagem por pessoa:</label>
+                    <input type="text" name="passagens" disabled>
+                  </div>
+                  <div class="input-container"> 
+                    <input type="button" value="Gerar orçamento" id="btn_fretar">
+                  </div>
+                </form>
+                <div class="mensagem_erro">
+                  <p id="erro"></p>
+                </div>
+                <div id="Valor_passagem">
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    <section class="page"  id='sobre'>
+        <article>
+    <h1>EXPRESSO NORDESTE À 52 ANOS VIAJANDO PELO BRASIL</h1>
+    <div>
+        <img src="img/historia.jpg" width="940">
+    </div>
+    <p>
+      Nos anos 50, um jovem carroceiro enfrentava as dificuldades da vida, comercializando frutas, verduras e cereais para sustentar sua família. Mas, ele tinha dentro de si um grande sonho: ter uma empresa que transportasse pessoas, reduzindo as distâncias entre as cidades, facilitando a vida de quem precisava percorrer as estradas do Paraná.
+    </p>
+    <p>
+      A partir de 1945, ele começou a viajar pelos sertões vendendo medicamentos, roupas e sal; além de prestar outros serviços. Assim, ele foi economizando dinheiro, conseguindo adquirir um caminhão Ford 1946, com o qual continuou no ramo de mascate, até 1951, quando instalou um armazém na localidade de Macacos, em Roncador – PR, onde trabalhava com sua esposa, Verônica Boiko.Como os negócios prosperavam cada vez mais, em 1952 ele resolve, em sociedade com o irmão Nicolau Boiko adquirir o Expresso Oeste, empresa constituída por dois carros Ford, com capacidade para 12 passageiros, que fazia apenas a linha Campo Mourão – Pitanga.
+    </p>
+    <p>empre buscou potencializar seus serviços de transporte de passageiros para toda esta rica região do Paraná, que na época começava a se desenvolver com a colonização de muitas cidades impulsionadas pela cafeicultura, hortelã e outras culturas.
+    Em pouco tempo já eram 15 ônibus rodando pelas estradas do Paraná, além de possuir uma matriz administrativa e garagem própria, sediadas em Campo Mourão, e já contavam com agências em outras cidades que estavam em seu roteiro.As cidades fundadas na região possuíam estrutura precária, além de muito mato e pinheiro e a mão-de-obra também era escassa. Por isso, Vassílio foi buscar nos conterrâneos das famílias amigas de Prudentópolis, trabalhadores de confiança, que pudessem colaborar para o crescimento da Empresa e consequentemente de toda região. Esses vinham de mala e cuia trabalhar na Empresa, chegando inclusive a morar nas instalações.</p>
+    <p>Pela expansão no ramo instalou a Matriz em São Paulo/SP e atua nos Estados do Paraná e São Paulo, nos segmentos de transporte rodoviário de passageiros, cargas e fretamento, tendo uma frota de 300 veículos, empregando direta e indiretamente mais de 1000 funcionários, transportando em torno de 250.000 de passageiros e rodando em média 1.350.000 km por mês, possui mais de 130 pontos de vendas de passagens e 14 garagens utilizadas para limpeza e manutenção de veículos.</p>
+    <blockquote>Fonte: http://www.expnordeste.com.br/?sessao=historia</blockquote>
+  </article>
+    </section>
+    <section id="pesquisa" class="page">
+      <form name="veiculo_busca">
+      <div class="input-container">
+        <label>Pesquisa Veiculo:</label>
+        <input type="text" name="pesquisa" placeholder="Digite indentificação Veiculo..">
+      </div>
+      <div class="input-container">
+        <input type="button" value="Buscar" id="encontrar">
+      </div>
+    </form>
+    <section>
+        <div class="pesquisa">
+          <img id="img_veiculo">
+          <p id="Nome"></p>
+          <p id="qtd"></p>
+          <p id="capacidade"></p>
+          <p id="Anos"></p>
+          <p id="Cod"></p>
+          <p id="descrição"></p>
+        </div>
+    </section>
+    </section>
+    </main>
+    <footer>
+      <p>&copy;Expresso Nordeste</p>
+    </footer>
+    <script type="text/javascript" src="js/Api/api_facebook.js"></script>
+    <script type="text/javascript" src="js/Api/logar.js"></script>
+    <script type="text/javascript" src="js/interação/mostrar.js"></script>
+    <script type="text/javascript" src="js/ações/vetores.js"></script>
+    <script type="text/javascript" src='js/listas/busca.js'></script>
+    <script type="text/javascript" src="js/ações/Registros_reservas.js"></script>
+    <script type="text/javascript" src="js/listas/pacotes.js"></script>
+    <script type="text/javascript" src="js/interação/menu.js"></script>
+     <script type="text/javascript" src="js/listas/cidades.js"></script>
+    <script type="text/javascript" src="js/listas/img.js"></script> 
+  </body>
+</html>

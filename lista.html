@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lista Reserva Expresso Nordeste </title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+  </head>
+  <body>
+   <header>
+    <div class="logo">
+      <img src="img/menu.png" class="logo_icone" id="ler">
+      <h1>Reservas Expresso</h1>
+    </div>
+    <nav id="abrir">
+      <ul>
+         <li><a href="">Configurações Reservas</a>
+            <ul>
+              <li><a href="#" id="Limpa">Limpar Lista Reservas</a></li>
+            </ul>
+          </li>
+          <li><a href="">Serviços Solicitados</a>
+            <ul>
+             <li><a id="chamar_fretamento">Fretamento(s)</a></li>
+             <li><a id="chamar_pacote">Pacote Turisticos</a></li>
+             <li><a id="chamar_transporte">Transportadora</a></li>
+            </ul>
+          </li>
+          <li><a href="index.html">Home</a></li>
+      </ul>
+   </nav>
+</header>
+    <section class="lista">
+      <section id="lista_frete">
+        <table >
+           <caption>Veiculos Sub Reservados</caption>
+          <tr>
+            <th>Foto Veiculo</th>
+            <th>Nome Veiculo</th>
+            <th>Quantidade Lugares</th>
+            <th>Quantidade ônibus reservados</th>
+            <th>Origem Fretemanto</th>
+            <th>Destino Fretamento</th>
+            <th>Total Fretamento</th>
+            <th>Ação</th>
+          </tr>
+          
+          <tbody id="reserva_bus">
+            
+          </tbody>
+        </table>
+      </section>
+      <section class="page" id="lista_pt">
+         <table >
+           <caption>Pacotes Turisticos Reservados</caption>
+          <tr>
+            <th>Codigo Produto</th>
+            <th>Foto Local</th>
+            <th>Localização</th>
+            <th>Cidade</th>
+            <th>Valor Pacote</th>
+            <th>Parcelamento</th>
+            <th>Ação</th>
+          </tr>
+          <tbody id="reserva_pacote">
+            
+          </tbody>
+        </table>
+      </section>
+         <section class="page" id="lista_trans">
+         <table >
+           <caption>Serviço Transporte</caption>
+          <tr>
+            <th>Quantidade caixas</th>
+            <th>Peso por caixa</th>
+            <th>Prazo solicitado</th>
+            <th>Entrega Calculada</th>
+            <th>Total Fretamento</th>
+          </tr>
+          <tbody id="reserva_transporte">
+            
+          </tbody>    
+        </table>
+         <div class="info_total">
+             <p id="Total_trans"></p>
+             <p id="Total_pacotes"></p>
+             <p id="Total"></p>
+             <p id="Total_reservas"></p>
+          </div>
+      </section>
+    </section>
+    <footer>
+      <p>&copy;Expresso Nordeste</p>
+    </footer>
+    <script type="text/javascript" src="js/interação/mostrar2.js"></script>
+    <script type="text/javascript" src="js/ações/vetores.js"></script>
+    <script type="text/javascript"  src="js/listas/contagens.js"></script>
+    <script type="text/javascript" src="js/ações/total.js"></script>
+    <script type="text/javascript" src="js/ações/ordenação.js"></script>
+    <script type="text/javascript" src="js/listas/lista.js"></script>
+    <script type="text/javascript" src="js/interação/menu.js"></script> 
+  </body>
+</html>

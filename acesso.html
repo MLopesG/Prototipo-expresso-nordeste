@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Local Cliente </title>
+    <link rel="stylesheet" type="text/css" href="css/style_login.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+    <script type="text/javascript" src="js/Api/api_facebook.js"></script>
+  <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+   </head>
+    <body>
+        <section class="espaco">
+            <div class="form_login">
+              <form>
+                <div class="container-input">
+                  <label>Usuário:</label>
+                  <input  id="txtEmail" type="email" placeholder="Digite Seu Usuario.." autofocus>
+                </div>
+                <div class="container-input">
+                  <label>Senha:</label>
+                  <input  id="txtPassword" type="password" placeholder="Digite Sua Senha Acesso...">
+                </div>
+                <div class="container-input">
+                  <input id = "btnLogin" type="button" value="Entrar">
+                </div>
+                 <div class="container-input">
+                  <input id = "btnSignUp"  type="button" value="Cadastrar">
+                </div>
+                 <div class="container-input">
+                    <div class="container-input" id="button_novo">
+                      <a href="index.html">Click para ir á , página inicial</a>
+                    </div>
+                    <div class="linha"></div>
+                    <div  id="muda" class="fb-login-button" data-width="100%" data-max-rows="6" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="true" data-use-continue-as="false"></div>
+                </div>
+              </form>
+            </div>
+        </section>
+        <script src="js/Api/app.js"></script>
+    </body>
+</html>
